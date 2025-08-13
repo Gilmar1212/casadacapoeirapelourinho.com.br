@@ -8,4 +8,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        outDir: 'public/build', // aqui você muda o caminho do build
+        manifest: true,
+        emptyOutDir: true,
+    },
+    base: '/build/', // base pública para acessar os arquivos
 });

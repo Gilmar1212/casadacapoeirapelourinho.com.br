@@ -1,11 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    margin:0;
+
+* {
+    margin: 0;
     padding: 0;
 }
-img{
+
+img {
+    max-width: 100%;
+}
+
+.logo {
     width: 100%;
     max-width: 300px;
+}
+
+.bg-body {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/storage/images/textura-03.webp");
+    background-color: #000000;
+    background-size: cover;
+}
+
+header {
+    background-color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.content-squares-diretoria {
+    background: #10A3DB;
+    background: radial-gradient(circle, rgba(35, 164, 111, 1) 0%, rgba(241, 138, 62, 1) 50%, rgba(251, 242, 22, 1) 100%);
+    padding: 20px 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.content-squares {
+    background-color: rgba(30, 178, 236, 0.5);
+    padding: 80px 20px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.content-squares--home {
+    background-color: rgba(30, 178, 236, 0.5);
+    padding: 90px 20px;
+    border-radius: 20px;
+    width: 70%;
+    height: 100%;
+}
+
+.quem-somos-img {
+    width: 70%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.diretoria-img {
+    width: 400px;
+    height: 517px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+#submenu-aulas{
+    top:22px;
+}
+/* Submenu escondido por padrão */
+.submenu {
+    display: none;
+}
+
+
+
+.submenu a {
+    display: block;
+    padding: 0.5rem;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    background-color: #f3f4f6;
+    /* bg-gray-100 */
+}
+
+/* Submenu escondido por padrão */
+.submenu {
+    display: none;
+}
+
+/* Hover no desktop */
+@media (max-width: 768px) {
+    .group:hover .submenu {
+        display: block;
+    }
+}
+/* No desktop, submenu aparece com hover */
+@media (max-width: 768px) {
+    .group:hover .submenu {
+        display: block;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        padding: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+}
+/* From Uiverse.io by mRcOol7 */
+.card {
+    background: radial-gradient(circle, rgba(35, 164, 111, 1) 0%, rgba(241, 138, 62, 1) 50%, rgba(251, 242, 22, 1) 100%);
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+
+.card-info {
+    --color: rgba(41, 43, 44, 0.5);
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+       border-radius: 40px;
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+}
+
+.card .title {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: white;
+    font-size: 20px;
+}
+.card .list li{
+    font-size: 18px;
+}
+.card .subtitle {
+    color: white;
+    font-size: 18px;
+    color: #fcf117;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.card:before,
+.card:after {
+    opacity: 0;
+}
+
+.card .list {
+    text-align: left;
+    padding: 10px 0;
+}
+.card--aulas{
+    width: 450px !important;
+    padding: 20px;
 }

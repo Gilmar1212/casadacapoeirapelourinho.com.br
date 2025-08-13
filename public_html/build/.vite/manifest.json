@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DUtuzuFE.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DNxiirP_.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "storage/app/public/images/textura-03.webp": {
+    "file": "assets/textura-03-fc7baZiF.webp",
+    "src": "storage/app/public/images/textura-03.webp"
+  }
+}
