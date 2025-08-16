@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title', 'Aulas de Dança Afro  - Casa da Capoeira Pelourinho')
+@section('title', 'Aulas de Dança Afro - Casa da Capoeira Pelourinho')
 @section('content')
 <div class="container mx-auto">
     <h1 class="text-5xl text-center py-5">Aulas de Dança Afro</h1>
@@ -17,18 +17,14 @@
                 <h3 class="text-yellow-200 text-xl">👑 Uma vivência especial:</h3>
                 <div class="py-5">
                     <p class="text-[#ffffff]">
-                        A Dança dos Reis e Rainhas dos Blocos Afros<br>
-                        Corpo, ancestralidade, elegância e resistência em movimento
+                        Sinta essa energia ! Experiências Culturais Unicas :
                     </p>
-                    <p class="text-[#ffffff]">
-                        🎭 Expressão, realeza e identidade dos blocos afros da Bahia<br>
-                        🔥 Uma aula de corpo e alma — reverência viva à cultura negra
-                    </p>
-                    <div class="py-">
-                        <ul class="list">
-                            <li class="text-[#ffffff]">Toque, sinta e viva o ritmo da Bahia!</li>
-                            <li class="text-[#ffffff]">📲 @casadacapoeirapelourinho</li>
-                        </ul>
+                    <ul class="list">
+                        <li class="text-[#ffffff]">Aula de Dança Afro</li>
+                        <li class="text-[#ffffff]">Dos Blocos Afros</li>
+                        <li class="text-[#ffffff]">Dança De Reis e Rainhas: Coreografias inspiradas nas tradições dos blocos afro, exaltando a realeza africana.</li>
+                    </ul>
+                    <div class="py-2">
                         <ul class="list">
                             <li class="text-[#ffffff]">Viva a força da coroa que dança!</li>
                             <li class="text-[#ffffff]">📲 @casadacapoeirapelourinho</li>
@@ -37,6 +33,8 @@
                 </div>
             </div>
         </div>
+        <h2 class="text-center text-5xl text-[#ffffff] py-5">Video das Aulas</h2>
+        <video class="mw-100 rounded-xl border-solid border-2 border-green-400" src="{{asset('storage/videos/aulas-danca/aula-danca.mp4')}}" controls></video>
     </div>
 </div>
 @endsection

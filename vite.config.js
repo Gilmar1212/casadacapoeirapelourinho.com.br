@@ -9,9 +9,9 @@ export default defineConfig({
         }),
     ],
     build: {
-        outDir: 'public/build', // aqui você muda o caminho do build
+        outDir: 'public_html/build', // aqui você muda o caminho do build
         manifest: true,
         emptyOutDir: true,
     },
-    base: '/build/', // base pública para acessar os arquivos
+    base: 'public_html/build', // base pública para acessar os arquivos
 });

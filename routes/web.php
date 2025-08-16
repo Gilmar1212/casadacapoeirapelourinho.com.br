@@ -28,3 +28,4 @@ Route::prefix('fotos')->group(function () {
     Route::get('/role-cultural', [\App\Http\Controllers\RoleCulturalController::class, 'returnViewRoleCultural'])->name('fotos.role-cultural');
     Route::get('/medalha-zumbi-capoeira', [\App\Http\Controllers\MedalhaZumbiController::class, 'returnViewMedalhaZumbi'])->name('fotos.medalha-zumbi-capoeira');    
 })->name('fotos');
+Route::get('/videos', [\App\Http\Controllers\VideosController::class, "returnViewVideos"])->name("videos");

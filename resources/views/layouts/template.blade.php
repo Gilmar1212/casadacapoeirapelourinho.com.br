@@ -40,10 +40,10 @@
 
                                     <!-- Submenu: Aulas -->
                                     <li class="relative group">
-                                        <a href="{{route('aulas.index')}}" onclick="toggleSubmenu('submenu')" class=" hover:underline">
+                                        <a href="{{route('aulas.index')}}" onmousemove="toggleSubmenu('submenu1')" class=" hover:underline">
                                             Aulas
                                         </a>
-                                        <ul class="submenu md:absolute bg-white border rounded shadow-md z-50">
+                                        <ul id="submenu1" class="submenu md:absolute bg-white border rounded shadow-md z-50">
                                             <li><a href="{{route('aulas.capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Capoeira</a></li>
                                             <li><a href="{{route('aulas.percussao')}}" class="block px-4 py-2 hover:bg-gray-100">Percussão</a></li>
                                             <li><a href="{{route('aulas.danca-afro')}}" class="block px-4 py-2 hover:bg-gray-100">Dança</a></li>
@@ -51,19 +51,19 @@
                                     </li>
 
                                     <li class="relative group">
-                                        <a href="{{route('fotos.index')}}" onclick="toggleSubmenu('submenu')" class=" hover:underline">
+                                        <a href="{{route('fotos.index')}}" onmousemove="toggleSubmenu('submenu2')" class=" hover:underline">
                                             Fotos
                                         </a>
-                                        <ul class="submenu md:absolute bg-white border rounded shadow-md z-50">
+                                        <ul id="submenu2" class="submenu md:absolute bg-white border rounded shadow-md z-50">
                                             <li><a href="{{route('fotos.role-cultural')}}" class="block px-4 py-2 hover:bg-gray-100">Rolê Cultural</a></li>
                                             <li><a href="{{route('fotos.medalha-zumbi-capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Outorga da Medalha Zumbi da Capoeira</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="hover:underline">Vídeos</a></li>
+                                    <li><a href="{{route('videos')}}" class="hover:underline">Vídeos</a></li>
 
                                     <!-- Submenu: Nossas Ações -->
                                     <li class="relative group">
-                                        <button onclick="toggleSubmenu('submenu')" class="md:pointer-events-none hover:underline">
+                                        <button onmousemove="toggleSubmenu('submenu-acoes')" class="md:pointer-events-none hover:underline">
                                             Nossas Ações
                                         </button>
                                         <ul id="submenu-acoes" class="submenu md:absolute bg-white border rounded shadow-md mt-2 z-50">

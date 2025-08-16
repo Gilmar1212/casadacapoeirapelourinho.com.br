@@ -113,7 +113,18 @@
                     </ul>
                 </div>
             </div>
-        </div>      
+        </div>  
+            @php
+        $files = glob(storage_path('app/public/images/aulas/aulas-capoeira/*.{jpg,jpeg,png,gif,webp}'), GLOB_BRACE);
+        @endphp
+        <h2 class="text-center text-5xl text-[#ffffff] py-5">Fotos das Aulas</h2>
+        <div class="grid grid-cols-4 gap-5">
+            @foreach($files as $file)
+            <a data-fancybox data-caption="Fotos das Aulas de Capoeira" href="{{ asset('storage/images/aulas/aulas-capoeira/' . basename($file)) }}" title="Fotos das Aulas de Capoeira">
+                <img class="w-96 rounded-xl border-solid border-2 border-green-400 h-[400px] object-cover" src="{{ asset('storage/images/aulas/aulas-capoeira/' . basename($file)) }}" alt="Imagem show Fotos das Aulas">
+            </a>
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection

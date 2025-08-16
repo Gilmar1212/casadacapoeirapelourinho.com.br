@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DUtuzuFE.css",
+    "file": "assets/app-C40mCdEf.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
@@ -12,9 +12,5 @@
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
-  },
-  "storage/app/public/images/textura-03.webp": {
-    "file": "assets/textura-03-fc7baZiF.webp",
-    "src": "storage/app/public/images/textura-03.webp"
   }
 }

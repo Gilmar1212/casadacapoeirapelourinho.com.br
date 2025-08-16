@@ -76,6 +76,17 @@
                 </div>
             </div>
         </div>
+         @php
+    $files = glob(storage_path('app/public/images/aulas/aulas-percussao/*.{jpg,jpeg,png,gif,webp}'), GLOB_BRACE);
+    @endphp
+    <h2 class="text-center text-5xl text-[#ffffff] py-5">Imagens das Aulas</h2>
+    <div class="grid grid-cols-4 gap-5">
+        @foreach($files as $file)
+        <a data-fancybox data-caption="Rolê Cultural" href="{{asset('storage/images/aulas/aulas-percussao/' . basename($file)) }}" title="Aulas de Percussão">
+            <img class="w-96 rounded-xl border-solid border-2 border-green-400 h-[400px] object-cover" src="{{ asset('storage/images/aulas/aulas-percussao/' . basename($file)) }}" alt="Imagem Aulas de Percussão">
+        </a>
+        @endforeach
+    </div>
     </div>
 </div>
 @endsection
