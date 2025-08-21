@@ -16,7 +16,7 @@
     $files = glob(storage_path('app/public/images/fotos/medalha-zumbi-capoeira/*.{jpg,jpeg,png,gif,webp}'), GLOB_BRACE);
     @endphp
     <h2 class="text-center text-5xl text-[#ffffff] py-5">Galeria de fotos do evento</h2>
-    <div class="grid grid-cols-4 gap-5">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
         @foreach($files as $file)
         <a data-fancybox data-caption="Rolê Cultural" href="{{asset('storage/images/fotos/medalha-zumbi-capoeira/' . basename($file)) }}" title="Orixás">
             <img class="w-96 rounded-xl border-solid border-2 border-green-400 h-[400px] object-cover" src="{{ asset('storage/images/fotos/medalha-zumbi-capoeira/' . basename($file)) }}" alt="Imagem show Orixás">

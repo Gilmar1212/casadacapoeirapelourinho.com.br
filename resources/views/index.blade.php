@@ -2,7 +2,7 @@
 @section('title', 'Home - Casa da Capoeira Pelourinho')
 @section('content')
 <div class="container mx-auto">
-  <div class="flex justify-center flex-row items-center gap-10">
+  <div class="flex justify-center max-lg:flex-row max-sm:flex-col items-center gap-10">
     <img class="quem-somos-img my-2" src="{{asset('storage/images/banner.webp')}}" alt="Banner" title="Banner">
     <div class="flex flex-col justify-center content-squares">
       <h1 class="text-5xl">Casa da Capoeira Pelourinho</h1>

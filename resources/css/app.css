@@ -17,7 +17,7 @@ img {
 }
 
 .bg-body {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/storage/images/textura-03.webp");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://localhost:8000/storage/images/textura-03.webp");
     background-color: #000000;
     background-size: cover;
 }
@@ -42,7 +42,7 @@ h1 {
     background-color: rgba(30, 178, 236, 0.5);
     padding: 80px 20px;
     border-radius: 20px;
-    width: 70%;
+    width: 80%;
 }
 
 .content-squares--home {
@@ -54,7 +54,7 @@ h1 {
 }
 
 .quem-somos-img {
-    width: 70%;
+    width: 80%;
     height: 400px;
     object-fit: cover;
     border-radius: 30px;
@@ -93,7 +93,9 @@ h1 {
 .submenu {
     display: none;
 }
-
+.menu-hidden{
+    display: block !important;
+}
 /* Hover no desktop */
 @media (max-width: 768px) {
     .group:hover .submenu {
@@ -177,6 +179,17 @@ h1 {
     width: 450px !important;
     padding: 20px;
 }
-.video-content{
+
+.video-content {
     width: 70%;
+}
+
+@media (max-width: 768px) {
+    .quem-somos-img {
+        width: 100%;
+    }
+
+    .content-squares {
+        width: 100%;
+    }
 }

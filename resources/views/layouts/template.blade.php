@@ -25,14 +25,15 @@
                         <div class="col-md-10">
                             <nav class="bg-white xs:shadow-md p-4">
                                 <!-- Mobile: botão hamburguer -->
-                                <div class="flex items-center justify-between md:hidden">
+                                <div class="flex items-center justify-between lg:hidden">
                                     <button onclick="toggleMobileMenu()" class="text-2xl">
                                         ☰
                                     </button>
                                 </div>
 
                                 <!-- Menu principal -->
-                                <ul id="main-menu" class="mt-4 hidden flex-col gap-4 md:flex md:flex-row md:items-center md:mt-0 relative">
+                                <ul id="main-menu" class="mt-4 lg:flex md:hidden max-sm:hidden flex-col gap-4 md:flex md:flex-row md:items-center md:mt-0 relative">
+
                                     <li><a href="{{route('index')}}" class="hover:underline">Início</a></li>
                                     <li><a href="{{route('quem-somos')}}" class="hover:underline">Quem somos</a></li>
                                     <li><a href="{{route('a-diretoria')}}" class="hover:underline">A Diretoria</a></li>
@@ -40,33 +41,32 @@
 
                                     <!-- Submenu: Aulas -->
                                     <li class="relative group">
-                                        <a href="{{route('aulas.index')}}" onmousemove="toggleSubmenu('submenu1')" class=" hover:underline">
-                                            Aulas
-                                        </a>
-                                        <ul id="submenu1" class="submenu md:absolute bg-white border rounded shadow-md z-50">
+                                        <a href="{{route('aulas.index')}}" class="hover:underline">Aulas</a>
+                                        <ul id="submenu1"
+                                            class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
                                             <li><a href="{{route('aulas.capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Capoeira</a></li>
                                             <li><a href="{{route('aulas.percussao')}}" class="block px-4 py-2 hover:bg-gray-100">Percussão</a></li>
                                             <li><a href="{{route('aulas.danca-afro')}}" class="block px-4 py-2 hover:bg-gray-100">Dança</a></li>
                                         </ul>
                                     </li>
 
+                                    <!-- Submenu: Fotos -->
                                     <li class="relative group">
-                                        <a href="{{route('fotos.index')}}" onmousemove="toggleSubmenu('submenu2')" class=" hover:underline">
-                                            Fotos
-                                        </a>
-                                        <ul id="submenu2" class="submenu md:absolute bg-white border rounded shadow-md z-50">
+                                        <a href="{{route('fotos.index')}}" class="hover:underline">Fotos</a>
+                                        <ul id="submenu2"
+                                            class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
                                             <li><a href="{{route('fotos.role-cultural')}}" class="block px-4 py-2 hover:bg-gray-100">Rolê Cultural</a></li>
-                                            <li><a href="{{route('fotos.medalha-zumbi-capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Outorga da Medalha Zumbi da Capoeira</a></li>
+                                            <li><a href="{{route('fotos.medalha-zumbi-capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Medalha Zumbi da Capoeira</a></li>
                                         </ul>
                                     </li>
+
                                     <li><a href="{{route('videos')}}" class="hover:underline">Vídeos</a></li>
 
                                     <!-- Submenu: Nossas Ações -->
                                     <li class="relative group">
-                                        <button onmousemove="toggleSubmenu('submenu-acoes')" class="md:pointer-events-none hover:underline">
-                                            Nossas Ações
-                                        </button>
-                                        <ul id="submenu-acoes" class="submenu md:absolute bg-white border rounded shadow-md mt-2 z-50">
+                                        <a href="#" class="hover:underline">Nossas Ações</a>
+                                        <ul id="submenu-acoes"
+                                            class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Ação Cultural</a></li>
                                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feira de Artes</a></li>
                                         </ul>
@@ -80,6 +80,7 @@
                                     <li><a href="#" class="hover:underline">Redes Sociais</a></li>
                                     <li><a href="#" class="hover:underline">Doações</a></li>
                                 </ul>
+
                             </nav>
                         </div>
                     </div>
@@ -94,18 +95,12 @@
             // Your custom options
         });
     </script>
-     <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('main-menu');
-      menu.classList.toggle('hidden');
-    }
-
-    function toggleSubmenu(id) {
-        console.log(id);
-      const submenu = document.getElementById(id);
-      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('main-menu');
+            menu.classList.toggle('menu-hidden');
+        }       
+    </script>
 </body>
 
 </html>
