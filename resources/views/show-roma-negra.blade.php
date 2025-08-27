@@ -7,6 +7,7 @@
             <h1 class="text-center text-5xl">Show Roma negra</h1>
             <h2 class="text-center text-3xl pb-8 text-[#ffffff]">Veja abaixo videos e fotos de nosso espetáculo</h2>
             <video class="mw-100 rounded-xl border-solid border-2 border-green-400" src="{{asset('storage/videos/show-roma-negra.mp4')}}" controls></video>
+            <iframe class="mw-100 h-[600px] mt-5 rounded-xl border-solid border-2 border-green-400" src="https://www.youtube.com/embed/vCaMjSHj7y4?si=KrOZdR-b9iT1eUKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         @php
         $files = glob(storage_path('app/public/images/show-roma-negra/capoeira-show/*.{jpg,jpeg,png,gif,webp}'), GLOB_BRACE);

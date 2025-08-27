@@ -20,65 +20,65 @@
         <div class="pb-10">
             <header>
                 <div>
-                    <div class="flex items-center justify-between md:justify-around gap-4">
-                        <div class="col-md-2"><img class="w-[150px] p-2" src="{{asset('storage/images/logo.webp')}}" alt="Logo" title="Logo"></div>
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="col-md-2"><img class="w-[150px] md:w-[200px] p-2" src="{{asset('storage/images/logo.webp')}}" alt="Logo" title="Logo"></div>
                         <div class="col-md-10">
-                            <nav class="bg-white xs:shadow-md p-4">
+                            <nav class="xs:shadow-md p-4 bg-white">
                                 <!-- Mobile: botão hamburguer -->
-                                <div class="flex items-center justify-between lg:hidden">
-                                    <button onclick="toggleMobileMenu()" class="text-2xl">
+                                <div class="flex items-center justify-between lg:hidden md:block ">
+                                    <button onclick="toggleMobileMenu()" class="text-2xl bg-white px-4 py-2">
                                         ☰
                                     </button>
                                 </div>
 
                                 <!-- Menu principal -->
-                                <ul id="main-menu" class="mt-4 lg:flex md:hidden max-sm:hidden flex-col gap-4 md:flex md:flex-row md:items-center md:mt-0 relative">
+                                <ul id="main-menu" class="mt-4 lg:flex menu-hidden lg:flex-row gap-4  md:flex-col md:items-center md:mt-0 relative">
 
-                                    <li><a href="{{route('index')}}" class="hover:underline">Início</a></li>
-                                    <li><a href="{{route('quem-somos')}}" class="hover:underline">Quem somos</a></li>
-                                    <li><a href="{{route('a-diretoria')}}" class="hover:underline">A Diretoria</a></li>
-                                    <li><a href="{{route('show-roma-negra')}}" class="hover:underline">Show Roma Negra</a></li>
+                                    <li class="text-[#3a3939]"><a href="{{route('index')}}" class="hover:underline">Início</a></li>
+                                    <li class="text-[#3a3939]"><a href="{{route('quem-somos')}}" class="hover:underline">Quem somos</a></li>
+                                    <li class="text-[#3a3939]"><a href="{{route('a-diretoria')}}" class="hover:underline">A Diretoria</a></li>
+                                    <li class="text-[#3a3939]"><a href="{{route('show-roma-negra')}}" class="hover:underline">Show Roma Negra</a></li>
 
                                     <!-- Submenu: Aulas -->
                                     <li class="relative group">
-                                        <a href="{{route('aulas.index')}}" class="hover:underline">Aulas</a>
+                                        <a class="text-[#3a3939]" href="{{route('aulas.index')}}" class="hover:underline">Aulas</a>
                                         <ul id="submenu1"
                                             class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
-                                            <li><a href="{{route('aulas.capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Capoeira</a></li>
-                                            <li><a href="{{route('aulas.percussao')}}" class="block px-4 py-2 hover:bg-gray-100">Percussão</a></li>
-                                            <li><a href="{{route('aulas.danca-afro')}}" class="block px-4 py-2 hover:bg-gray-100">Dança</a></li>
+                                            <li class="text-[#3a3939]"><a href="{{route('aulas.capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Capoeira</a></li>
+                                            <li class="text-[#3a3939]"><a href="{{route('aulas.percussao')}}" class="block px-4 py-2 hover:bg-gray-100">Percussão</a></li>
+                                            <li class="text-[#3a3939]"><a href="{{route('aulas.danca-afro')}}" class="block px-4 py-2 hover:bg-gray-100">Dança</a></li>
                                         </ul>
                                     </li>
 
                                     <!-- Submenu: Fotos -->
                                     <li class="relative group">
-                                        <a href="{{route('fotos.index')}}" class="hover:underline">Fotos</a>
+                                        <a class="text-[#3a3939]" href="{{route('fotos.index')}}" class="hover:underline">Fotos</a>
                                         <ul id="submenu2"
                                             class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
-                                            <li><a href="{{route('fotos.role-cultural')}}" class="block px-4 py-2 hover:bg-gray-100">Rolê Cultural</a></li>
-                                            <li><a href="{{route('fotos.medalha-zumbi-capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Medalha Zumbi da Capoeira</a></li>
+                                            <li class="text-[#3a3939]"><a href="{{route('fotos.role-cultural')}}" class="block px-4 py-2 hover:bg-gray-100">Rolê Cultural</a></li>
+                                            <li class="text-[#3a3939]"><a href="{{route('fotos.medalha-zumbi-capoeira')}}" class="block px-4 py-2 hover:bg-gray-100">Medalha Zumbi da Capoeira</a></li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="{{route('videos')}}" class="hover:underline">Vídeos</a></li>
+                                    <li class="text-[#3a3939]"><a class="text-[#3a3939]" href="{{route('videos')}}" class="hover:underline">Vídeos</a></li>
 
                                     <!-- Submenu: Nossas Ações -->
                                     <li class="relative group">
-                                        <a href="#" class="hover:underline">Nossas Ações</a>
+                                        <a class="text-[#3a3939]" href="#" class="hover:underline">Nossas Ações</a>
                                         <ul id="submenu-acoes"
                                             class="absolute hidden group-hover:block bg-white border rounded shadow-md top-4 z-50 mt-2">
-                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Ação Cultural</a></li>
-                                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feira de Artes</a></li>
+                                            <li class="text-[#3a3939]"><a href="#" class="block px-4 py-2 hover:bg-gray-100">Ação Cultural</a></li>
+                                            <li class="text-[#3a3939]"><a href="#" class="block px-4 py-2 hover:bg-gray-100">Feira de Artes</a></li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="#" class="hover:underline">Editais Executados</a></li>
-                                    <li><a href="#" class="hover:underline">Filiados</a></li>
-                                    <li><a href="#" class="hover:underline">Eventos</a></li>
-                                    <li><a href="#" class="hover:underline">Faça Sua Filiação</a></li>
-                                    <li><a href="#" class="hover:underline">Contatos</a></li>
-                                    <li><a href="#" class="hover:underline">Redes Sociais</a></li>
-                                    <li><a href="#" class="hover:underline">Doações</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Editais Executados</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Filiados</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Eventos</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Faça Sua Filiação</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Contatos</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Redes Sociais</a></li>
+                                    <li class="text-[#3a3939]"><a href="#" class="hover:underline">Doações</a></li>
                                 </ul>
 
                             </nav>
@@ -97,9 +97,11 @@
     </script>
     <script>
         function toggleMobileMenu() {
-            const menu = document.getElementById('main-menu');
-            menu.classList.toggle('menu-hidden');
-        }       
+            if (window.innerWidth <= 1024) {
+                const menu = document.getElementById('main-menu');
+                menu.classList.toggle('menu-hidden');
+            }
+        }
     </script>
 </body>
 

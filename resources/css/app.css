@@ -17,13 +17,13 @@ img {
 }
 
 .bg-body {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://localhost:8000/storage/images/textura-03.webp");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://casadacapoeirapelourinho.com.br/storage/images/textura-03.webp");
     background-color: #000000;
     background-size: cover;
 }
 
 header {
-    background-color: white;
+    background-color: rgba(255,255,255,0.2);
 }
 
 h1 {
@@ -94,7 +94,12 @@ h1 {
     display: none;
 }
 .menu-hidden{
-    display: block !important;
+    display: flex;
+}
+@media (max-width: 1024px) {
+    .menu-hidden{
+    display: none;
+}
 }
 /* Hover no desktop */
 @media (max-width: 768px) {
@@ -185,6 +190,9 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .card{
+        width: 100%;
+    }
     .quem-somos-img {
         width: 100%;
     }
